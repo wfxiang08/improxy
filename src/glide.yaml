@@ -1,0 +1,17 @@
+package: .
+import:
+- package: github.com/chai2010/webp
+- package: github.com/disintegration/imaging
+- package: github.com/fatih/color
+- package: github.com/wfxiang08/cyutils
+  version: a1e100462898931f081803bb601b083ce9cee60b
+  subpackages:
+  - utils
+  - utils/atomic2
+  - utils/errors
+  - utils/rolling_log
+- package: golang.org/x/image
+  subpackages:
+  - webp
+- package: github.com/aws/aws-sdk-go
+  version: v1.12.19

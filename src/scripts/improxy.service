@@ -1,0 +1,18 @@
+[Unit]
+Description=Image Proxy Service
+After=network.target
+
+[Service]
+WorkingDirectory=/usr/local/service/improxy/
+ExecStart=/usr/local/service/improxy/improxy -addr :8088 -logfile /data/tmp_improxy/service.log -cache /data/tmp_improxy/cache
+
+# StandardOutput=null
+
+Restart=always
+RestartSec=15
+
+User=worker
+Group=worker
+
+[Install]
+WantedBy=multi-user.target
